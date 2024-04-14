@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Build",
+			"command": "make",
+			"args": [],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group":  "build",
+			"detail": "GCC: C:/Program Files (x86)/mingw64/bin/gcc"
+		},
+		{
+			"type": "shell",
+			"label": "Upload",
+			"command": "openocd",
+			"args": [
+				"-f",
+				"interface/stlink.cfg",
+				"-f",
+				"target/stm32f4x.cfg",
+				"-c",
+				"program build/LED.elf verify reset exit"
+			],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group":  "build",
+			"detail": "GCC: C:/Program Files (x86)/mingw64/bin/gcc"
+		},
+	]
+}
