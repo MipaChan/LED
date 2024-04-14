@@ -18,9 +18,7 @@
 			"command": "openocd",
 			"args": [
 				"-f",
-				"interface/stlink.cfg",
-				"-f",
-				"target/stm32f4x.cfg",
+				"openocd.cfg",
 				"-c",
 				"program build/LED.elf verify reset exit"
 			],
